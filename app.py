@@ -120,5 +120,6 @@ chart_base = alt.Chart(df4).encode(
 ).properties(width=800, height=400)
 
 line_prec = chart_base.mark_line(color='blue', size=1).encode(y='mean(number of tweets published - BLUE)')
+line_temp = chart_base.mark_line(color='red', size=1).encode(y='mean(engagement rate (%) - RED)')
 combi = alt.layer(line_prec, line_temp).resolve_scale(y='independent')
 combi
